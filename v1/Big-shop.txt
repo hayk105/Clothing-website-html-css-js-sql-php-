@@ -1,6 +1,0 @@
-		<div>
-			<img src="" alt="">
-			<h3></h3>
-			<h2></h2>
-			<button><a href="" target="blank">Buy Now</a></button>
-		</div>

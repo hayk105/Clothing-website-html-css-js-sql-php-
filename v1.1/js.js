@@ -1,3 +1,4 @@
+var ru_version = ["NMD_R1 ПРАЗДНИЧНАЯ ОБУВЬ","ОБУВЬ ULTRABOOST DNA X LEGO® COLORS","ОБУВЬ ULTRABOOST 4.0 DNA","DISNEY MICKEY FORTARUN ОБУВЬ","Футболка adidas x LEGO® VIDIYO ™","ДЖЕЙМС ХАРДЕН ТОМ. 5 ТОЛСТОВКА","ДЖЕЙМС ХАРДЕН ТОМ. 5 ТОЛСТОВКА","Толстовка с капюшоном из флиса с логотипом ESSENTIALS (ПЛЮС РАЗМЕР)","TIRO 21 TRACK PANTS","ГОЛУБАЯ ВЕРСИЯ ШАПКА","ADICOLOR МАНЖЕТА ВЯЗАНАЯ ШАПКА С ЯРКАМИ","ТРЕФОИЛЬНАЯ ШАПКА","РЮКЗАК MACRO","РЮКЗАК MACRO","РЮКЗАК ОТРЯДА","ФЕСТИВАЛЬНАЯ СУМКА ADICOLOR CLASSIC","Nike Air Force 1","Nike Air Max 90 Премиум","Nike Glide FlyEase Премиум","Кроссовки Nike Tiempo Legend 9 Elite FG","Челси Страйк","Nike Спортивная Одежда","Бостон Селтикс","Команда 31 на корте","Nike Dri-FIT Pro","Nike ACG Karst","Команда Академии Nike","Nike SB Heritage86","Серия А Рейс","Рейс Российской Премьер-лиги","Клуб Премьер-лиги","Поле Челси","купить сейчас"]
 var arr = [
 	{
 		img: `https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/62d96641e799450fbbdfad0800cb06ed_9366/NMD_R1_Primeblue_Shoes_Black_GZ9256_01_standard.jpg`,
@@ -227,6 +228,7 @@ var arr = [
 
 
 function home(){
+	$("#body").html("")
 	for (var i = 0; arr.length > i; i++) {
 		$("#body").append(`
 		<div>
@@ -242,9 +244,10 @@ home()
 
 
 function filter(type2){
+	position = type2
 	$("#body").html("")
 	for (var i = 0; arr.length > i; i++) {
-		if (arr[i].type.trim() == type2.toLowerCase().trim()) {
+		if (arr[i].type.trim() == type2.toLowerCase().trim() && lang != "RU") {
 			$("#body").append(`
 				<div>
 				<img src="${arr[i].img}" alt="">
@@ -254,307 +257,74 @@ function filter(type2){
 			</div>
 			`)
 		}
+		else if(arr[i].type.trim() == type2.toLowerCase().trim()){
+			$("#body").append(`
+				<div>
+					<img src="${arr[i].img}" alt="">
+					<h3>${(ru_version[i]).length > 19 ? `<p title="${(ru_version[i])}">${(ru_version[i]).substring(0, 19)}...</p>` : (ru_version[i])}</h3>
+					<h2>${arr[i].h2}</h2>
+					<button><a href="${arr[i].a}" target="blank">${ru_version[ru_version.length - 1]}</a></button>
+				</div>
+			`)	
+			}
 	}
 }
 
 
-
+var lang = "EN"
+var position = "home"
 
 let het = document.getElementById("het")
 	let bacel_menu = document.getElementById("bacel-menu")
-	let no5 = document.getElementById("no5")
-	let no6 = document.getElementById("no6")
-	let no7 = document.getElementById("no7")
-	let no = document.getElementById("no")
-	let no1 = document.getElementById("no1")
-	let tabat1 = document.getElementById("tabat1")
-	let tabat = document.getElementById("tabat")
-	let koshik = document.getElementById('Koshik');
-	let shorer = document.getElementById("shor");
-	let glxark = document.getElementById("glxark")
-	let sunka = document.getElementById("sunka")
-	let gndak = document.getElementById("gndak")
-	let sharq1 = document.getElementById("sharq1")
-	let sharq2 = document.getElementById("sharq2")
-	let sharq3 = document.getElementById("sharq3")
-	let sharq4 = document.getElementById("sharq4")
-	let sharq5 = document.getElementById("sharq5")
-	let sharq6 = document.getElementById("sharq6")
-	let sharq7 = document.getElementById("sharq7")
-	let sharq8 = document.getElementById("sharq8")
-	let no2 = document.getElementById("no2")
-	let no3 = document.getElementById("no3")
-	let ru = document.getElementById('ru');
-	let img = document.getElementById("arandzinimg")
-	let img2 = document.getElementById("arandzinimg1")
-	let en = document.getElementById("en")
-	let mek = document.getElementById("mek")
-	let erku = document.getElementById("erku")
-	let ereq = document.getElementById("ereq")
-	let chors = document.getElementById("chors")
-	let hing = document.getElementById("hing")
-	let	vec = document.getElementById("vec")
-	let	yot = document.getElementById("yot")
-	let	ut = document.getElementById("ut")
-	let	iny = document.getElementById("iny")
-	let tas = document.getElementById("tas")
-	let tasmek = document.getElementById("tasmek")
-	let taserku = document.getElementById("taserku")
-	let tasereq = document.getElementById("tasereq")
-	let taschors = document.getElementById("taschors")
-	let tashing = document.getElementById("tashing")
-	let tasvec = document.getElementById("tasvec")
-	let tasyot = document.getElementById("tasyot")
-	let tasut = document.getElementById("tasut")
-	let tasiny = document.getElementById("tasiny")
-	let qsan = document.getElementById("qsan")
-	let qsanmek = document.getElementById("qsanmek")
-	let qsanerku = document.getElementById("qsanerku")
-	let qsanereq = document.getElementById("qsanereq")
-	let qsanchors = document.getElementById("qsanchors")
-	let qsanhing = document.getElementById("qsanhing")
-	let qsanvec = document.getElementById("qsanvec")
-	let qsanyot = document.getElementById("qsanyot")
-	let qsanut = document.getElementById("qsanut")
-	let qsaniny = document.getElementById("qsaniny")
-	let eresun = document.getElementById("eresun")
-	let eresunmek = document.getElementById("eresunmek")
-	let eresunerku = document.getElementById("eresunerku")
-	let a = document.getElementById("a")
-	let a1 = document.getElementById("a1")
-	let a2 = document.getElementById("a2")
-	let a3 = document.getElementById("a3")
-	let a4 = document.getElementById("a4")
-	let a5 = document.getElementById("a5")
-	let a6 = document.getElementById("a6")
-	let a7 = document.getElementById("a7")
-	let a8 = document.getElementById("a8")
-	let a9 = document.getElementById("a9")
-	let a10 = document.getElementById("a10")
-	let a11 = document.getElementById("a11")
-	let a12 = document.getElementById("a12")
-	let a13 = document.getElementById("a13")
-	let a14 = document.getElementById("a14")
-	let a15 = document.getElementById("a15")
-	let a16 = document.getElementById("a16")
-	let a17 = document.getElementById("a17")
-	let a18 = document.getElementById("a18")
-	let a19 = document.getElementById("a19")
-	let a20 = document.getElementById("a20")
-	let a21 = document.getElementById("a21")
-	let a22 = document.getElementById("a22")
-	let a23 = document.getElementById("a23")
-	let a24 = document.getElementById("a24")
-	let a25 = document.getElementById("a25")
-	let a26 = document.getElementById("a26")
-	let a27 = document.getElementById("a27")
-	let a28 = document.getElementById("a28")
-	let a29 = document.getElementById("a29")
-	let a30 = document.getElementById("a30")
-	let a31 = document.getElementById("a31")
-	let ru1 = document.getElementById("ru1")
-	let en1 = document.getElementById("en1")
-	let arandzinimg2 = document.getElementById("arandzinimg2")
-	let arandzinimg3 = document.getElementById("arandzinimg3")
-	function Shoes() {
-		sharq1.style.display = "flex"
-		sharq2.style.display = "none"
-		sharq3.style.display = "none"
-		sharq4.style.display = "none"
-		sharq5.style.display = "flex"
-		sharq6.style.display = "none"
-		sharq7.style.display = "none"
-		sharq8.style.display = "none"
+
+	var x = 1
+	function toggle(){
+		x *= -1
+		$("#lang").css(`display`, `${x == -1 ? "inline" : "none"}`)
+		$("#arandzinimg").css(`transform`,`rotate(${x == -1 ? 0 : 180}deg)`)
+		$("#lang").html(lang == "EN" ?"RU":"EN")
+		$("#lang2").html(lang != "EN" ?"RU":"EN")
 	}
-	function Clothes() {
-		sharq1.style.display = "none"
-		sharq2.style.display = "flex"
-		sharq3.style.display = "none"
-		sharq4.style.display = "none"
-		sharq5.style.display = "none"
-		sharq6.style.display = "flex"
-		sharq7.style.display = "none"
-		sharq8.style.display = "none"
-	}
-	function bacellezun(){
-		ru.style.display = "inline"
-		img.style.display = "none"
-		img2.style.display = "inline"
-	}
-	function pakellezun() {
-		ru.style.display = "none"
-		img2.style.display = "none"
-		img.style.display = "inline"
+	function ru(){
+		$("#body").html("")
+			$("#sunka").html("Сумки")
+			$("#Koshik").html("Обувь")
+			$("#shor").html("Одежда")
+			$("#glxark").html("Головные уборы")
+			$("#gndak").html("Мячи")
+			$("#tabat1").html("Штаны")
+			for (var i = 0; arr.length > i; i++) {
+			$("#body").append(`
+				<div>
+					<img src="${arr[i].img}" alt="">
+					<h3>${(ru_version[i]).length > 19 ? `<p title="${(ru_version[i])}">${(ru_version[i]).substring(0, 19)}...</p>` : (ru_version[i])}</h3>
+					<h2>${arr[i].h2}</h2>
+					<button><a href="${arr[i].a}" target="blank">${ru_version[ru_version.length - 1]}</a></button>
+				</div>
+			`)	
+			}
 	}
 	function lezunpoxel() {
-		ru1.style.display = "inline"
-		en1.style.display = "none"
-		arandzinimg2.style.display = "inline"
-		sunka.innerHTML = "Сумки"
-		koshik.innerHTML = "Обувь"
-		shorer.innerHTML = "Одежда"
-		glxark.innerHTML = "Головные <br> уборы"
-		gndak.innerHTML = "Мячи"
-		tabat1.innerHTML = "Штаны"
-		ru.style.display = "none"
-		img2.style.display = "none"
-		en.style.display = "none"
-		img.style.display = "none"
-		mek.innerHTML = "NMD_R1 ПРАЗДНИЧНАЯ ОБУВЬ"
-		erku.innerHTML = "ОБУВЬ ULTRABOOST DNA X LEGO® COLORS"
-		ereq.innerHTML = "ОБУВЬ ULTRABOOST 4.0 DNA"
-		chors.innerHTML = "DISNEY MICKEY FORTARUN ОБУВЬ"
-		hing.innerHTML = "Футболка adidas x LEGO® VIDIYO ™"
-		vec.innerHTML = "ДЖЕЙМС ХАРДЕН ТОМ. 5 ТОЛСТОВКА"
-		yot.innerHTML = "ДЖЕЙМС ХАРДЕН ТОМ. 5 ТОЛСТОВКА"
-		ut.innerHTML = "Толстовка с капюшоном из флиса с логотипом ESSENTIALS (ПЛЮС РАЗМЕР)"
-		iny.innerHTML = "TIRO 21 TRACK PANTS"
-		tas.innerHTML = "ГОЛУБАЯ ВЕРСИЯ ШАПКА"
-		tasmek.innerHTML = "ADICOLOR МАНЖЕТА ВЯЗАНАЯ ШАПКА С ЯРКАМИ"
-		taserku.innerHTML = "ТРЕФОИЛЬНАЯ ШАПКА";
-		tasereq.innerHTML = "РЮКЗАК MACRO"
-		taschors.innerHTML = "РЮКЗАК MACRO"
-		tashing.innerHTML = "РЮКЗАК ОТРЯДА"
-		tasvec.innerHTML = "ФЕСТИВАЛЬНАЯ СУМКА ADICOLOR CLASSIC"
-		tasyot.innerHTML = "Nike Air Force 1"
-		tasut.innerHTML = "Nike Air Max 90 Премиум"
-		tasiny.innerHTML = "Nike Glide FlyEase Премиум"
-		qsan.innerHTML = "Кроссовки Nike Tiempo Legend 9 Elite FG"
-		qsanmek.innerHTML = "Челси Страйк"
-		qsanerku.innerHTML = "Nike Спортивная Одежда"
-		qsanereq.innerHTML = "Бостон Селтикс"
-		qsanchors.innerHTML = "Команда 31 на корте"
-		qsanhing.innerHTML = "Nike Dri-FIT Pro"
-		qsanvec.innerHTML = "Nike ACG Karst"
-		qsanyot.innerHTML = "Команда Академии Nike"
-		qsanut.innerHTML = "Nike SB Heritage86"
-		qsaniny.innerHTML = "Серия А Рейс"
-		eresun.innerHTML = "Рейс Российской Премьер-лиги"
-		eresunmek.innerHTML = "Клуб Премьер-лиги"
-		eresunerku.innerHTML = "Поле Челси"
-		a.innerHTML = "купить сейчас"
-		a1.innerHTML = "купить сейчас"
-		a2.innerHTML = "купить сейчас"
-		a3.innerHTML = "купить сейчас"
-		a4.innerHTML = "купить сейчас"
-		a5.innerHTML = "купить сейчас"
-		a6.innerHTML = "купить сейчас"
-		a7.innerHTML = "купить сейчас"
-		a8.innerHTML = "купить сейчас"
-		a9.innerHTML = "купить сейчас"
-		a10.innerHTML = "купить сейчас"
-		a11.innerHTML = "купить сейчас"
-		a12.innerHTML = "купить сейчас"
-		a13.innerHTML = "купить сейчас"
-		a14.innerHTML = "купить сейчас"
-		a15.innerHTML = "купить сейчас"
-		a16.innerHTML = "купить сейчас"
-		a17.innerHTML = "купить сейчас"
-		a18.innerHTML = "купить сейчас"
-		a19.innerHTML = "купить сейчас"
-		a20.innerHTML = "купить сейчас"
-		a21.innerHTML = "купить сейчас"
-		a22.innerHTML = "купить сейчас"
-		a23.innerHTML = "купить сейчас"
-		a24.innerHTML = "купить сейчас"
-		a25.innerHTML = "купить сейчас"
-		a26.innerHTML = "купить сейчас"
-		a27.innerHTML = "купить сейчас"
-		a28.innerHTML = "купить сейчас"
-		a29.innerHTML = "купить сейчас"
-		a30.innerHTML = "купить сейчас"
-		a31.innerHTML = "купить сейчас"
+		lang = lang == "EN" ?"RU":"EN"
+		toggle()
+		if (lang == "RU") {
+			ru()
+		}
+		else{
+			$("#Koshik").html("Shoes")
+			$("#shor").html("Clothes")
+			$("#glxark").html("Hats")
+			$("#sunka").html('Bags')
+			$("#gndak").html("Balls")
+			$("#tabat1").html("Trousers")
+			$("#body button").html("Buy Now")
+			home()
+		}
+		if (position != "home") {
+			filter(position)
+		}
 	}
-	function bacellezun9(){
-		en1.style.display = "inline"
-		arandzinimg2.style.display = "none"
-		arandzinimg3.style.display = "inline"
-	}
-	function pakellezun8(){
-		en1.style.display = "none"
-		arandzinimg2.style.display = "inline"
-		arandzinimg3.style.display = "none"
-	}
-	function lezunpoxel8() {
-		ru1.style.display = "none"
-		en1.style.display = "none"
-		arandzinimg3.style.display = "none"
-		arandzinimg2.style.display = "none"
-		ru.style.display = "none"
-		img2.style.display = "none"
-		en.style.display = "inline"
-		img.style.display = "inline"
-		sunka.innerHTML = "Bags"
-		koshik.innerHTML = "Shoes"
-		shorer.innerHTML = "Clothes"
-		glxark.innerHTML = "Hats"
-		gndak.innerHTML = "Balls"
-		tabat1.innerHTML = "Trousers"
-		mek.innerHTML = "NMD_R1 PRIMEBLUE SHOES"
-		erku.innerHTML = "ULTRABOOST DNA X LEGO® COLORS SHOES"
-		ereq.innerHTML = "ULTRABOOST 4.0 DNA SHOES"
-		chors.innerHTML = "DISNEY MICKEY FORTARUN SHOES"
-		hing.innerHTML = "adidas x LEGO® VIDIYO™ Tee Shirt"
-		vec.innerHTML = "JAMES HARDEN VOL. 5 HOODIE"
-		yot.innerHTML = "JAMES HARDEN VOL. 5 HOODIE"
-		ut.innerHTML = "ESSENTIALS LOGO FLEECE HOODIE (PLUS SIZE)"
-		iny.innerHTML = "TIRO 21 TRACK PANTS"
-		tas.innerHTML = "BLUE VERSION BEANIE"
-		tasmek.innerHTML = "ADICOLOR CUFF KNIT GLITTER BEANIE"
-		taserku.innerHTML = "TREFOIL BEANIE";
-		tasereq.innerHTML = "MACRO BACKPACK"
-		taschors.innerHTML = "MACRO BACKPACK"
-		tashing.innerHTML = "SQUAD BACKPACK"
-		tasvec.innerHTML = "ADICOLOR CLASSIC FESTIVAL BAG"
-		tasyot.innerHTML = "Nike Air Force 1"
-		tasut.innerHTML = "Nike Air Max 90 Premium"
-		tasiny.innerHTML = "Nike Glide FlyEase Premium"
-		qsan.innerHTML = "Nike Tiempo Legend 9 Elite FG"
-		qsanmek.innerHTML = "Chelsea FC Strike"
-		qsanerku.innerHTML = "Nike Sportswear"
-		qsanereq.innerHTML = "Boston Celtics"
-		qsanchors.innerHTML = "Team 31 Courtside"
-		qsanhing.innerHTML = "Nike Dri-FIT Pro"
-		qsanvec.innerHTML = "Nike ACG Karst"
-		qsanyot.innerHTML = "Nike Academy Team"
-		qsanut.innerHTML = "Nike SB Heritage86"
-		qsaniny.innerHTML = "Serie A Flight"
-		eresun.innerHTML = "Russian Premier League Flight"
-		eresunmek.innerHTML = "Premier League Club"
-		eresunerku.innerHTML = "Chelsea FC Pitch"
-		a.innerHTML = "Buy Now"
-		a1.innerHTML = "Buy Now"
-		a2.innerHTML = "Buy Now"
-		a3.innerHTML = "Buy Now"
-		a4.innerHTML = "Buy Now"
-		a5.innerHTML = "Buy Now"
-		a6.innerHTML = "Buy Now"
-		a7.innerHTML = "Buy Now"
-		a8.innerHTML = "Buy Now"
-		a9.innerHTML = "Buy Now"
-		a10.innerHTML = "Buy Now"
-		a11.innerHTML = "Buy Now"
-		a12.innerHTML = "Buy Now"
-		a13.innerHTML = "Buy Now"
-		a14.innerHTML = "Buy Now"
-		a15.innerHTML = "Buy Now"
-		a16.innerHTML = "Buy Now"
-		a17.innerHTML = "Buy Now"
-		a18.innerHTML = "Buy Now"
-		a19.innerHTML = "Buy Now"
-		a20.innerHTML = "Buy Now"
-		a21.innerHTML = "Buy Now"
-		a22.innerHTML = "Buy Now"
-		a23.innerHTML = "Buy Now"
-		a24.innerHTML = "Buy Now"
-		a25.innerHTML = "Buy Now"
-		a26.innerHTML = "Buy Now"
-		a27.innerHTML = "Buy Now"
-		a28.innerHTML = "Buy Now"
-		a29.innerHTML = "Buy Now"
-		a30.innerHTML = "Buy Now"
-		a31.innerHTML = "Buy Now"
-	}
+	
 	function bacelmenu() {
 		bacel_menu.style.display = "block"
 		koshik.style.display = "block"

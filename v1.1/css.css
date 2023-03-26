@@ -36,13 +36,10 @@ h4{
 	color: black;
 	margin: 0;
 }
-#arandzinimg1{
-	top: 21px;
-	position: absolute;
+#arandzinimg{
 	transform: rotate(180deg);
-	display: none;
 }
-#arandzinimg, #arandzinimg1, #arandzinimg2{
+#arandzinimg, #arandzinimg2{
 	width: 20px;
 	height: 20px;
 	box-shadow: none;

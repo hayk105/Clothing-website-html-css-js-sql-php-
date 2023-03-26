@@ -1,0 +1,217 @@
+*{
+	-webkit-user-select: none;
+}
+body{
+	background-image: url(https://avatanplus.com/files/resources/original/599aa06e999df15e0402b025.jpg);
+	background-size: 100%;
+}
+#body{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+}
+header{
+	margin-bottom: 10px;
+}
+li{
+	list-style: none;
+	background: white;
+	color: black;
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 41px;
+	cursor: pointer;
+}
+li, h4{
+	font-size: 20px;
+}
+h4, #arandzinimg, #arandzinimg2{
+	position: absolute;
+	top: 20px;
+}
+h4{
+	background: white;
+	color: black;
+	margin: 0;
+}
+#arandzinimg1{
+	top: 21px;
+	position: absolute;
+	transform: rotate(180deg);
+	display: none;
+}
+#arandzinimg, #arandzinimg1, #arandzinimg2{
+	width: 20px;
+	height: 20px;
+	box-shadow: none;
+	cursor: pointer;
+	left: 44px;
+}
+#arandzindiv h2{
+	cursor: pointer;
+}
+#body div{
+	width: 20%;
+	height: 5%;
+	padding: auto;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid black;
+	margin-bottom: 1%;
+	margin-right: 1%;
+	box-sizing: border-box;
+
+}
+img{
+	width: 100%;
+	transition: 1s;
+}
+img:hover{
+	border-radius: 50%; 
+	box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+a{
+	text-decoration: none;
+	transition: 1s;
+	color: black;
+}
+h3{
+	height: 15px;
+	font-size: 20px;
+}
+button{
+	background: white;
+	color: black;
+}
+#het{
+	width: 20px;
+	height: 20px;
+	cursor: ponter;
+	display: none;
+	position: absolute;
+	z-index: 10;
+}
+#qwerty{
+	width: 50%;
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+.qwerty1{
+	width: 50%;
+	border-radius: 0px;
+	box-shadow: none;
+	display: block;
+	border: 0px solid black;
+}
+.qwerty1 div{
+	border:2px solid black;
+}
+@media (max-width: 610px){
+	h3{
+		font-size: 10px;
+	}
+	h2{
+		font-size: 18px;
+	}
+	button, a{
+		width: 70%;
+		font-size: 70%;
+	}
+	h2:hover{
+	font-size: 20px;
+	color: 	white;
+	transform: rotate(720deg);
+	}
+	button:hover{
+	font-size: 18px;
+	color: white;
+	background: black;
+	transform: rotate(360deg);
+	}
+	#arandzinimg1, #arandzinimg{
+		width: 15px;
+		height: 15px;
+	}
+	li, h4{
+		font-size: 13px;
+	}
+}
+#ru1, #en1, #arandzinimg2, #arandzinimg3{
+	display: none;
+}
+#arandzinimg3{
+	width: 15px;
+	height: 15px;
+	top: 21px;
+	position: absolute;
+	box-shadow: none;
+	transform: rotate(180deg);
+	display: none;
+	left: 44px;
+	cursor: pointer;
+}
+
+
+#arandzindiv{
+	width: 100%;
+	border: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#tabat{
+	z-index: 2;
+}
+.pere{
+	width: 20px;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+
+.arandzin_h2{
+	padding:10px;
+}
+#ereqg{
+	box-shadow: none;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 0;
+	display: none;
+}
+#bacel-menu{
+	transition: 3s;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	display: none;
+	background: red;
+	z-index: 5;
+	width: 50%;
+	height: 500px;
+}
+@media (min-width: 411px) {
+		#arandzin_h2{
+			display: block;
+		}
+	}
+@media (max-width: 411px) {
+	.arandzin_h2{
+		padding:3px;
+		position: absolute;
+		display: none;
+	}
+	#ereqg{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		display: block;
+	}
+	#arandzindiv{
+		justify-content: end;
+	}
+}

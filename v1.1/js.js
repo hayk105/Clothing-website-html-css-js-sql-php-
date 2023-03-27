@@ -325,22 +325,19 @@ let het = document.getElementById("het")
 	}
 	
 	function bacelmenu() {
-		$("#bacel-menu").css({"display" : "block"})
-		$(".arandzin_h2").css({"display" : "block", "font-size" : "26px", "z-index": "6"})
+		$("#bacel-menu").css({"display" : "block", "width" : "100%"})
+		$(".arandzin_h2").css({"transition" : "2s", "display" : "block", "right": "50%"})
 		$("#Koshik").css({"top": "15%"})
 		$("#shor").css({"top": "30%"})
 		$("#glxark").css({"top": "45%"})
 		$("#sunka").css({"top": "60%"})
 		$("#gndak").css({"top": "75%"})
 		$("#tabat1").css({"top": "90%"})
+		$("#het").css({"display": "block"})
 	}
 	function het432() {
-		het.style.display = "none"
-		shorer.style.display = "none"
-		sunka.style.display = "none"
-		tabat1.style.display = "none"
-		bacel_menu.style.display = "none"
-		glxark.style.display = "none"
-		gndak.style.display = "none"
-		koshik.style.display = "none"
+		$("#bacel-menu").css({"width" : "0%"})
+		$(".arandzin_h2").css({"right" : "-15%"})
+		setTimeout(1000, () =>{$("#bacel-menu").css({"display" : "none"}); $(".arandzin_h2").css({"display" : "none"})})
+		$("#het").css({"display": "none"})
 	}

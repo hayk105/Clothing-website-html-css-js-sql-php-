@@ -30,7 +30,7 @@ li{
 li, h4{
 	font-size: 3vw;
 }
-h4, #arandzinimg, #arandzinimg2{
+h4, #arandzinimg{
 	position: absolute;
 	top: 20px;
 }
@@ -86,26 +86,13 @@ button{
 #het{
 	width: 20px;
 	height: 20px;
-	cursor: ponter;
+	cursor: pointer;
 	display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 10;
-}
-#qwerty{
-	width: 50%;
-	border-radius: 0px;
+	right: 8px;
+	transform: rotate(180deg);
 	box-shadow: none;
-}
-
-.qwerty1{
-	width: 50%;
-	border-radius: 0px;
-	box-shadow: none;
-	display: block;
-	border: 0px solid black;
-}
-.qwerty1 div{
-	border:2px solid black;
 }
 @media (max-width: 610px){
 	h3{
@@ -118,39 +105,17 @@ button{
 		width: 70%;
 		font-size: 70%;
 	}
-	/*#arandzinimg1, #arandzinimg{
-		width: 3%;
-	}*/
-	/*li, h4{
-		font-size: 13px;
-	}*/
 }
-#arandzinimg2, #arandzinimg3{
-	display: none;
-}
-#arandzinimg3{
-	width: 15px;
-	height: 15px;
-	top: 21px;
-	position: absolute;
-	box-shadow: none;
-	transform: rotate(180deg);
-	display: none;
-	left: 44px;
-	cursor: pointer;
-}
-
-
 #arandzindiv{
 	width: 100%;
 	border: none;
 	display: flex;
 	justify-content: space-evenly;
 }
-
+/*
 #tabat{
 	z-index: 2;
-}
+}*/
 .pere{
 	width: 20px;
 	position: fixed;
@@ -169,37 +134,36 @@ button{
 	border-radius: 0;
 	display: none;
 }
-.arandzin_h2, #bacel-menu{
-	position: fixed;
-	right: 50%;
-}
+
 #bacel-menu{
-	transition: 3s;
+	transition: 2s;
 	right: 0px;
 	top: 0px;
 	display: none;
 	background: red;
 	z-index: 5;
-	width: 100%;
+	width: 0%;
 	height: 100%;
 }
-@media (min-width: 411px) {
+/*@media (min-width: 411px) {
 		#arandzin_h2{
 			display: block;
 		}
-	}
+}*/
 @media (max-width: 411px) {
 	.arandzin_h2{
 		padding:3px;
 		position: fixed;
 		display: none;
-		right: 50%;
+		right: -15%;
 		transform: translate(50%, -50%);
+		transition: 2s;
+		z-index: 6;
+		font-size : 26px
 	}
 	#ereqg{
 		position: absolute;
-		right: 20px;
-		top: 20px;
+		right: 8px;
 		display: block;
 	}
 	#arandzindiv{
@@ -216,5 +180,8 @@ button{
 	}
 	#lang{
 		left: 0.5%;
+	}
+	.arandzin_h2, #bacel-menu{
+		position: fixed;
 	}
 }

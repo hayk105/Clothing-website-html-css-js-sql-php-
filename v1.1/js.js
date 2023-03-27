@@ -275,7 +275,6 @@ var lang = "EN"
 var position = "home"
 
 let het = document.getElementById("het")
-	let bacel_menu = document.getElementById("bacel-menu")
 
 	var x = 1
 	function toggle(){
@@ -326,33 +325,14 @@ let het = document.getElementById("het")
 	}
 	
 	function bacelmenu() {
-		bacel_menu.style.display = "block"
-		koshik.style.display = "block"
-		koshik.style.right = "50px"
-		koshik.style.fontSize = "26px"
-		tabat1.style.display = "block"
-		tabat1.style.right = "45px"
-		tabat1.style.top = "70px"
-		tabat1.style.fontSize = "26px"
-		shorer.style.display = "block"
-		shorer.style.right = "45px"
-		shorer.style.top = "130px"
-		shorer.style.fontSize = "26px"
-		glxark.style.display = "block"
-		glxark.style.right = " 50px"
-		glxark.style.top = "190px"
-		glxark.style.fontSize = "26px"
-		sunka.style.display = "block"
-		sunka.style.right = "55px"
-		sunka.style.top = "250px"
-		sunka.style.fontSize = "26px"
-		gndak.style.display = "block"
-		gndak.style.right = "58px"
-		gndak.style.top = "310px"
-		gndak.style.fontSize = "26px"
-		het.style.display = "block"
-		het.style.right = "150px"
-		het.style.top = "10px"
+		$("#bacel-menu").css({"display" : "block"})
+		$(".arandzin_h2").css({"display" : "block", "font-size" : "26px", "z-index": "6"})
+		$("#Koshik").css({"top": "15%"})
+		$("#shor").css({"top": "30%"})
+		$("#glxark").css({"top": "45%"})
+		$("#sunka").css({"top": "60%"})
+		$("#gndak").css({"top": "75%"})
+		$("#tabat1").css({"top": "90%"})
 	}
 	function het432() {
 		het.style.display = "none"

@@ -155,9 +155,7 @@ button{
 		padding:3px;
 		position: fixed;
 		display: none;
-		right: -15%;
 		transform: translate(50%, -50%);
-		transition: 2s;
 		z-index: 6;
 		font-size : 26px
 	}

@@ -276,68 +276,71 @@ var position = "home"
 
 let het = document.getElementById("het")
 
-	var x = 1
-	function toggle(){
-		x *= -1
-		$("#lang").css(`display`, `${x == -1 ? "inline" : "none"}`)
-		$("#arandzinimg").css(`transform`,`rotate(${x == -1 ? 0 : 180}deg)`)
-		$("#lang").html(lang == "EN" ?"RU":"EN")
-		$("#lang2").html(lang != "EN" ?"RU":"EN")
-	}
-	function ru(){
-		$("#body").html("")
-			$("#sunka").html("Сумки")
-			$("#Koshik").html("Обувь")
-			$("#shor").html("Одежда")
-			$("#glxark").html("Головные уборы")
-			$("#gndak").html("Мячи")
-			$("#tabat1").html("Штаны")
-			for (var i = 0; arr.length > i; i++) {
-			$("#body").append(`
-				<div>
-					<img src="${arr[i].img}" alt="">
-					<h3>${(ru_version[i]).length > 19 ? `<p title="${(ru_version[i])}">${(ru_version[i]).substring(0, 19)}...</p>` : (ru_version[i])}</h3>
-					<h2>${arr[i].h2}</h2>
-					<button><a href="${arr[i].a}" target="blank">${ru_version[ru_version.length - 1]}</a></button>
-				</div>
-			`)	
-			}
-	}
-	function lezunpoxel() {
-		lang = lang == "EN" ?"RU":"EN"
-		toggle()
-		if (lang == "RU") {
-			ru()
+var x = 1
+function toggle(){
+	x *= -1
+	$("#lang").css(`display`, `${x == -1 ? "inline" : "none"}`)
+	$("#arandzinimg").css(`transform`,`rotate(${x == -1 ? 0 : 180}deg)`)
+	$("#lang").html(lang == "EN" ?"RU":"EN")
+	$("#lang2").html(lang != "EN" ?"RU":"EN")
+}
+function ru(){
+	$("#body").html("")
+		$("#sunka").html("Сумки")
+		$("#Koshik").html("Обувь")
+		$("#shor").html("Одежда")
+		$("#glxark").html("Головные уборы")
+		$("#gndak").html("Мячи")
+		$("#tabat1").html("Штаны")
+		for (var i = 0; arr.length > i; i++) {
+		$("#body").append(`
+			<div>
+				<img src="${arr[i].img}" alt="">
+				<h3>${(ru_version[i]).length > 19 ? `<p title="${(ru_version[i])}">${(ru_version[i]).substring(0, 19)}...</p>` : (ru_version[i])}</h3>
+				<h2>${arr[i].h2}</h2>
+				<button><a href="${arr[i].a}" target="blank">${ru_version[ru_version.length - 1]}</a></button>
+			</div>
+		`)	
 		}
-		else{
-			$("#Koshik").html("Shoes")
-			$("#shor").html("Clothes")
-			$("#glxark").html("Hats")
-			$("#sunka").html('Bags')
-			$("#gndak").html("Balls")
-			$("#tabat1").html("Trousers")
-			$("#body button").html("Buy Now")
-			home()
-		}
-		if (position != "home") {
-			filter(position)
-		}
+}
+function lezunpoxel() {
+	lang = lang == "EN" ?"RU":"EN"
+	toggle()
+	if (lang == "RU") {
+		ru()
 	}
+	else{
+		$("#Koshik").html("Shoes")
+		$("#shor").html("Clothes")
+		$("#glxark").html("Hats")
+		$("#sunka").html('Bags')
+		$("#gndak").html("Balls")
+		$("#tabat1").html("Trousers")
+		$("#body button").html("Buy Now")
+		home()
+	}
+	if (position != "home") {
+		filter(position)
+	}
+}
+function bacelmenu(x) {
+	$(".arandzin_h2").css({"display" : "block", "right": "50%"})
+	x == 1 ? $(".arandzin_h2").css({"transition" : "2s"}):""
+	$("#bacel-menu").css({"display" : "block", "width" : "100%"})
 	
-	function bacelmenu() {
-		$("#bacel-menu").css({"display" : "block", "width" : "100%"})
-		$(".arandzin_h2").css({"transition" : "2s", "display" : "block", "right": "50%"})
-		$("#Koshik").css({"top": "15%"})
-		$("#shor").css({"top": "30%"})
-		$("#glxark").css({"top": "45%"})
-		$("#sunka").css({"top": "60%"})
-		$("#gndak").css({"top": "75%"})
-		$("#tabat1").css({"top": "90%"})
-		$("#het").css({"display": "block"})
-	}
-	function het432() {
-		$("#bacel-menu").css({"width" : "0%"})
-		$(".arandzin_h2").css({"right" : "-15%"})
-		setTimeout(1000, () =>{$("#bacel-menu").css({"display" : "none"}); $(".arandzin_h2").css({"display" : "none"})})
-		$("#het").css({"display": "none"})
-	}
+	$("#Koshik").css({"top": "15%"})
+	$("#shor").css({"top": "30%"})
+	$("#glxark").css({"top": "45%"})
+	$("#sunka").css({"top": "60%"})
+	$("#gndak").css({"top": "75%"})
+	$("#tabat1").css({"top": "90%"})
+	$("#het").css({"display": "block"})
+}
+bacelmenu(2)
+het2()
+function het2() {
+	$("#bacel-menu").css({"width" : "0%"})
+	$(".arandzin_h2").css({"right" : "-15%"})
+	setTimeout(1000, () =>{$("#bacel-menu").css({"display" : "none"}); $(".arandzin_h2").css({"display" : "none"})})
+	$("#het").css({"display": "none"})
+}

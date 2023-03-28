@@ -1,3 +1,4 @@
+var char = 19
 var ru_version = ["NMD_R1 ПРАЗДНИЧНАЯ ОБУВЬ","ОБУВЬ ULTRABOOST DNA X LEGO® COLORS","ОБУВЬ ULTRABOOST 4.0 DNA","DISNEY MICKEY FORTARUN ОБУВЬ","Футболка adidas x LEGO® VIDIYO ™","ДЖЕЙМС ХАРДЕН ТОМ. 5 ТОЛСТОВКА","ДЖЕЙМС ХАРДЕН ТОМ. 5 ТОЛСТОВКА","Толстовка с капюшоном из флиса с логотипом ESSENTIALS (ПЛЮС РАЗМЕР)","TIRO 21 TRACK PANTS","ГОЛУБАЯ ВЕРСИЯ ШАПКА","ADICOLOR МАНЖЕТА ВЯЗАНАЯ ШАПКА С ЯРКАМИ","ТРЕФОИЛЬНАЯ ШАПКА","РЮКЗАК MACRO","РЮКЗАК MACRO","РЮКЗАК ОТРЯДА","ФЕСТИВАЛЬНАЯ СУМКА ADICOLOR CLASSIC","Nike Air Force 1","Nike Air Max 90 Премиум","Nike Glide FlyEase Премиум","Кроссовки Nike Tiempo Legend 9 Elite FG","Челси Страйк","Nike Спортивная Одежда","Бостон Селтикс","Команда 31 на корте","Nike Dri-FIT Pro","Nike ACG Karst","Команда Академии Nike","Nike SB Heritage86","Серия А Рейс","Рейс Российской Премьер-лиги","Клуб Премьер-лиги","Поле Челси","купить сейчас"]
 var arr = [
 	{
@@ -233,7 +234,7 @@ function home(){
 		$("#body").append(`
 		<div>
 			<img src="${arr[i].img}" alt="">
-			<h3>${(arr[i].title).length > 19 ? `<p title="${(arr[i].title)}">${(arr[i].title).substring(0, 19)}...</p>` : (arr[i].title)}</h3>
+			<h3>${(arr[i].title).length > char ? `<p title="${(arr[i].title)}">${(arr[i].title).substring(0, char)}...</p>` : (arr[i].title)}</h3>
 			<h2>${arr[i].h2}</h2>
 			<button><a href="${arr[i].a}" target="blank">Buy Now</a></button>
 		</div>
@@ -296,7 +297,7 @@ function ru(){
 		$("#body").append(`
 			<div>
 				<img src="${arr[i].img}" alt="">
-				<h3>${(ru_version[i]).length > 19 ? `<p title="${(ru_version[i])}">${(ru_version[i]).substring(0, 19)}...</p>` : (ru_version[i])}</h3>
+				<h3>${(ru_version[i]).length > char ? `<p title="${(ru_version[i])}">${(ru_version[i]).substring(0, char)}...</p>` : (ru_version[i])}</h3>
 				<h2>${arr[i].h2}</h2>
 				<button><a href="${arr[i].a}" target="blank">${ru_version[ru_version.length - 1]}</a></button>
 			</div>
@@ -344,3 +345,22 @@ function het2() {
 	setTimeout(1000, () =>{$("#bacel-menu").css({"display" : "none"}); $(".arandzin_h2").css({"display" : "none"})})
 	$("#het").css({"display": "none"})
 }
+
+window.addEventListener("resize", (event) => {
+	if (window.innerWidth <= "1233" && window.innerWidth > "1083"){
+		char = 16
+		position == "home"? home() :filter(eval(position))
+	}
+	else if(window.innerWidth <= "1083" && window.innerWidth > "934"){
+		char = 13
+		position == "home"? home() :filter(eval(position))
+	}
+	else if(window.innerWidth <= "934" && window.innerWidth > "724"){
+		char = 10
+		position == "home"? home() :filter(eval(position))
+	}
+	else if(window.innerWidth <= "724" && window.innerWidth > "0"){
+		char = 9
+		position == "home"? home() :filter(eval(position))
+	} 
+});

@@ -150,6 +150,18 @@ button{
 			display: block;
 		}
 }*/
+@media (max-width:  384px){
+	h3{
+		font-size: 7px;
+	}
+	h2{
+		font-size: 10px;
+	}
+	button, a{
+		width: 70%;
+		font-size: 6px;
+	}
+}
 @media (max-width: 411px) {
 	.arandzin_h2{
 		padding:3px;
